@@ -17,7 +17,7 @@ class Lua(Linter):
 
     """Provides an interface to luac -p."""
 
-    syntax = 'lua'
+    syntax = ('lua', 'CoronaSDKLua')
     cmd = 'luac -p * -'
     regex = r'^.+?:.+?:(?P<line>\d+): (?P<message>.+?(?:near (?P<near>\'.+\')|$))'
     error_stream = util.STREAM_STDERR
